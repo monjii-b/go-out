@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #fa9ac3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #message {
+            margin: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        #face {
+            width: 150px;
+            height: 150px;
+            text-align: center;
+        }
+        #button-container {
+            display: flex;
+            justify-content: center;
+        }
+        #yes, #no {
+            margin: 0 15px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        #yes {
+            background-color: #FFC3FF;
+            color: #FFF;
+        }
+        #yes:hover {
+            background-color: #FFA3FF;
+        }
+        #no {
+            background-color: #FFD9FF;
+            color: #000;
+        }
+        #no:hover {
+            background-color: #FFB9FF;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="message" class="header_text">Do you wanna go out with me?</h1>
+    <img id="face" src="https://media.giphy.com/media/pJNCzYKh5AbLXTpnew/giphy.gif" />
+    <div id="button-container">
+        <div id="yes">Yes</div>
+        <div id="no">No</div>
+    </div>
+
+    <script>
+        document.getElementById('yes').addEventListener('click', function() {
+            window.location.href = '2.html';
+        });
+
+        document.getElementById('no').addEventListener('mouseover', function() {
+            this.style.position = 'absolute';
+            this.style.left = Math.random() * window.innerWidth + 'px';
+            this.style.top = Math.random() * window.innerHeight + 'px';
+        });
+    </script>
+</body>
+</html>
